@@ -1,5 +1,5 @@
 {% set name = "requests-gracedb" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 76dc4fa35bb150e8c31bb21a4c5577ed3336a09067bc6fa0371973aff5f2e22f
+  sha256: afa25548c657744c839702051aaed32df2c8e0122d619d5a6dc3f744ce1e32ac
   patches:
     # https://git.ligo.org/emfollow/requests-gracedb/issues/13
     - namespace_packages.patch
