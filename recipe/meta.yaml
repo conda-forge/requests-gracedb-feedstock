@@ -8,9 +8,6 @@ package:
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   sha256: afa25548c657744c839702051aaed32df2c8e0122d619d5a6dc3f744ce1e32ac
-  patches:
-    # https://git.ligo.org/emfollow/requests-gracedb/issues/13
-    - namespace_packages.patch
 
 build:
   noarch: python
