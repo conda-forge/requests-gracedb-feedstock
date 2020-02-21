@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: "{{ PYTHON }} -m pip install . --ignore-installed -vv "
 
 requirements:
   host:
@@ -48,7 +48,7 @@ about:
   home: "https://git.ligo.org/emfollow/requests-gracedb"
   license: "GPL-2.0-or-later"
   license_family: "GPL"
-  license_file: "LICENSE.rst"
+  license_file: "LICENSE.md"
   summary: "generic connection pooling HTTP client for GraceDB and similar services"
 
 extra:
