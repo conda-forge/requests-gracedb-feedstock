@@ -12,30 +12,32 @@ source:
 build:
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . --ignore-installed -vv '
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
-    - setuptools >=38.3.0
+    - python >=3.7
+    - setuptools >=61
+    - setuptools-scm >=6.2
   run:
     - cryptography
-    - python
+    - python >=3.7
     - requests
     - safe-netrc
-    - six
 
 test:
-  imports:
-    - requests_gracedb
   requires:
+    - pip
     - pytest
     - pytest-freezegun
     - pytest-httpserver
     - pytest-socket
-    - python >=3
   commands:
+    # check metadata
+    - python -m pip check requests-gracedb
+    - python -m pip show requests-gracedb
+    # run test suite
     - python -m pytest --pyargs requests_gracedb
 
 about:
