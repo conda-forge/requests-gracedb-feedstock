@@ -11,18 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=61
     - setuptools-scm >=6.2
   run:
     - cryptography
-    - python >=3.7
+    - python >={{ python_min }}
     - requests
     - safe-netrc
 
@@ -33,6 +33,7 @@ test:
     - pytest-freezegun
     - pytest-httpserver
     - pytest-socket
+    - python {{ python_min }}
   commands:
     # check metadata
     - python -m pip check requests-gracedb
