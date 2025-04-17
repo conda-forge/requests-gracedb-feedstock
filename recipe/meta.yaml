@@ -1,5 +1,5 @@
 {% set name = "requests-gracedb" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3e6e929ed230d4ff109b7f181760c3b4a43e3bd718d8e2f6f427e6c439638cc3
+  sha256: af92435125fc215df704149d14a0d0ea9aecdcb7b01be714dab773a99930c6ec
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
