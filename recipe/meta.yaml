@@ -36,12 +36,14 @@ test:
     - pytest-httpserver
     - pytest-socket
     - python {{ python_min }}
+  source_files:
+    - tests/
   commands:
     # check metadata
     - python -m pip check requests-gracedb
     - python -m pip show requests-gracedb
     # run test suite
-    - python -m pytest --pyargs requests_gracedb
+    - python -m pytest -ra -v tests/
 
 about:
   description: |
