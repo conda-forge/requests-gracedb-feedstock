@@ -21,7 +21,6 @@ requirements:
     - setuptools >=77
     - setuptools-scm >=8
   run:
-    - cryptography >=42
     - igwn-auth-utils >=1.3.0
     - pyjwt
     - python >={{ python_min }}
